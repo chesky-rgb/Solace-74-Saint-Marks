@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amenities &middot; SOLACE</title>
+<meta name="description" content="A full floor of amenities at Solace — fitness, yoga & pilates, golf simulator, lounges, library, coworking, events, and a pet spa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a href="index.html" aria-label="Solace home"><img class="nav-logo" src="assets/logo.png" alt="Solace"></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks">
+    <a class="nlink" href="residences.html">Residences</a>
+    <a class="nlink active" href="amenities.html">Amenities</a>
+    <a class="nlink" href="rooftop.html">Rooftop</a>
+    <a class="nlink" href="neighborhood.html">Neighborhood</a>
+    <a class="nlink" href="gallery.html">Gallery</a>
+    <a class="nav-cta" href="#inquire">Inquire</a>
+  </nav>
+</header>
+<section class="page-hero">
+  <img src="assets/fitness-1.jpg" alt="Solace fitness center">
+  <div class="scrim"></div>
+  <div class="wrap"><div class="ph-inner">
+    <span class="label eyebrow">The Amenities</span>
+    <h1>A full floor given<br>to living well.</h1>
+    <p class="ph-sub">Movement, gathering, focus, and rest &mdash; each room finished with the same care as the homes.</p>
+  </div></div>
+</section>
+<section class="amen band" id="amenities">
+  <div class="wrap">
+    <div class="grid">
+      <div class="card c-7 a1 reveal"><img src="assets/fitness-1.jpg" alt="Fitness center"><div class="cap"><div class="k">Fitness</div><div class="d">A light-filled training floor</div></div></div>
+      <div class="card c-5 a1 reveal d1"><img src="assets/yoga-1.jpg" alt="Yoga and pilates studio"><div class="cap"><div class="k">Yoga &amp; Pilates</div><div class="d">Studio for stillness</div></div></div>
+      <div class="card c-4 a-portrait tall reveal"><img src="assets/coworking.jpg" alt="Coworking"><div class="cap"><div class="k">Work</div><div class="d">Coworking &amp; private desks</div></div></div>
+      <div class="card c-8 a1 reveal d1"><img src="assets/lounge-1.jpg" alt="Resident lounge"><div class="cap"><div class="k">The Lounge</div><div class="d">Where the building gathers</div></div></div>
+      <div class="card c-8 a1 reveal d1"><img src="assets/golf.jpg" alt="Golf simulator"><div class="cap"><div class="k">Golf Simulator</div><div class="d">Play a round, any season</div></div></div>
+      <div class="card c-6 a1 reveal"><img src="assets/library.jpg" alt="Library"><div class="cap"><div class="k">Library</div><div class="d">A quiet reading room</div></div></div>
+      <div class="card c-6 a1 reveal d1"><img src="assets/game.jpg" alt="Game lounge"><div class="cap"><div class="k">Game Lounge</div><div class="d">Billiards, darts &amp; screens</div></div></div>
+      <div class="card c-5 a1 reveal"><img src="assets/event.jpg" alt="Private event space"><div class="cap"><div class="k">Private Events</div><div class="d">Room to host</div></div></div>
+      <div class="card c-4 a-portrait tall reveal d1"><img src="assets/lobby.jpg" alt="Lobby"><div class="cap"><div class="k">Arrival</div><div class="d">A double-height lobby</div></div></div>
+      <div class="card c-3 a1 reveal d2"><img src="assets/petspa.jpg" alt="Pet spa"><div class="cap"><div class="k">Pet Spa</div><div class="d">For every resident</div></div></div>
+    </div>
+    <div class="conv reveal">
+      <span class="label" style="color:#C9A86E">Everyday, handled</span>
+      <p>A <b>large package room</b> and <b>Amazon Hub lockers</b> keep every delivery secure &mdash; accepted around the clock and waiting whenever you get home.</p>
+    </div>
+  </div>
+</section>
+
+<section class="inquire band" id="inquire">
+  <div class="wrap inq-grid">
+    <div class="reveal">
+      <span class="label eyebrow">Inquire</span>
+      <h2>Be among the<br>first to arrive.</h2>
+      <p class="isub">Leasing begins August 1. Share a few details and our team will reach out with availability, pricing, and a private preview.</p>
+      <div class="inq-contact">
+        <div class="row"><div class="ck">Leasing</div><a class="cv" href="mailto:leasing@solace74.com">leasing@solace74.com</a></div>
+        <div class="row"><div class="ck">Address</div><div class="cv">74 St Marks Place<br>Brooklyn, New York</div></div>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <form id="inqForm" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="inquiry">
+        <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+        <div class="field"><label for="fname">Name</label><input id="fname" name="name" type="text" placeholder="First and last name" required></div>
+        <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" placeholder="you@email.com" required></div>
+        <div class="field"><label for="fphone">Phone</label><input id="fphone" name="phone" type="tel" placeholder="(000) 000-0000"></div>
+        <div class="field"><label for="flayout">Home type</label>
+          <select id="flayout" name="layout"><option value="">Select a layout</option><option>Studio</option><option>One bedroom</option><option>Two bedroom</option><option>Three bedroom</option><option>Not sure yet</option></select>
+        </div>
+        <div class="field"><label for="fmsg">Message</label><textarea id="fmsg" name="message" placeholder="Anything you'd like us to know"></textarea></div>
+        <button class="btn" type="submit">Request information</button>
+        <p class="form-note">By submitting, you agree to be contacted by the Solace leasing team. We never share your information.</p>
+      </form>
+      <div class="form-done" id="formDone">
+        <div class="serif">Thank you &mdash; we'll be in touch.</div>
+        <p>Your inquiry has reached the Solace leasing team. Expect to hear from us shortly with availability and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img class="foot-logo" src="assets/logo.png" alt="Solace">
+        <p style="margin-top:16px;max-width:280px;font-size:14px;color:#8f8071">A warm modern rental residence at the corner of St Marks Place and Fourth Avenue, Brooklyn.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <div class="fh">Explore</div>
+          <a href="residences.html">Residences</a>
+          <a href="amenities.html">Amenities</a>
+          <a href="rooftop.html">Rooftop</a>
+          <a href="neighborhood.html">Neighborhood</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="foot-col">
+          <div class="fh">Leasing</div>
+          <a href="mailto:leasing@solace74.com">leasing@solace74.com</a>
+          <p>74 St Marks Place</p>
+          <p>Brooklyn, New York</p>
+          <a href="#inquire">Request information</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 Solace at 74 St Marks. All rights reserved.</div>
+      <div class="eho"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10h2v9h5v-5h4v5h5v-9h2z"/></svg><span>Equal Housing Opportunity</span></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body></html>

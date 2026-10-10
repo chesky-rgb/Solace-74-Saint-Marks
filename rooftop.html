@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rooftop &middot; SOLACE</title>
+<meta name="description" content="A landscaped rooftop and planted terraces at Solace, with open views to the Manhattan skyline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a href="index.html" aria-label="Solace home"><img class="nav-logo" src="assets/logo.png" alt="Solace"></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks">
+    <a class="nlink" href="residences.html">Residences</a>
+    <a class="nlink" href="amenities.html">Amenities</a>
+    <a class="nlink active" href="rooftop.html">Rooftop</a>
+    <a class="nlink" href="neighborhood.html">Neighborhood</a>
+    <a class="nlink" href="gallery.html">Gallery</a>
+    <a class="nav-cta" href="#inquire">Inquire</a>
+  </nav>
+</header>
+<section class="page-hero">
+  <img src="assets/rooftop-2.jpg" alt="Solace rooftop terrace">
+  <div class="scrim"></div>
+  <div class="wrap"><div class="ph-inner">
+    <span class="label eyebrow">Rooftop &amp; Terraces</span>
+    <h1>The city, kept<br>at arm's length.</h1>
+    <p class="ph-sub">Dining under the sky, planted terraces, and open views across the harbor.</p>
+  </div></div>
+</section>
+<section class="band" id="rooftop">
+  <div class="wrap statement">
+    <span class="label eyebrow reveal">Above it all</span>
+    <h2 class="lead reveal d1">A landscaped rooftop with dining under the sky and <em>open views across the harbor</em> to the Manhattan skyline.</h2>
+    <p class="body reveal d2">Below the roof, planted terraces offer a greener, calmer kind of outdoor room &mdash; shaded seating, long tables, and quiet corners to slip away to.</p>
+  </div>
+</section>
+<section class="band-tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="grid">
+      <div class="card c-8 a1 reveal"><img src="assets/rooftop-3.jpg" alt="Rooftop skyline lounge"><div class="cap"><div class="k">Rooftop</div><div class="d">Skyline lounge</div></div></div>
+      <div class="card c-4 a-portrait tall reveal d1"><img src="assets/ext-balcony.jpg" alt="Private balcony"><div class="cap"><div class="k">Homes</div><div class="d">Private balconies</div></div></div>
+      <div class="card c-4 a1 reveal"><img src="assets/rooftop-dine.jpg" alt="Rooftop dining"><div class="cap"><div class="k">Rooftop</div><div class="d">Dine under the sky</div></div></div>
+      <div class="card c-4 a1 reveal d1"><img src="assets/terrace.jpg" alt="Garden terrace"><div class="cap"><div class="k">Terrace</div><div class="d">Planted &amp; private</div></div></div>
+      <div class="card c-4 a1 reveal d2"><img src="assets/terrace-2.jpg" alt="Landscaped terrace"><div class="cap"><div class="k">Terrace</div><div class="d">Open-air retreat</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="inquire band" id="inquire">
+  <div class="wrap inq-grid">
+    <div class="reveal">
+      <span class="label eyebrow">Inquire</span>
+      <h2>Be among the<br>first to arrive.</h2>
+      <p class="isub">Leasing begins August 1. Share a few details and our team will reach out with availability, pricing, and a private preview.</p>
+      <div class="inq-contact">
+        <div class="row"><div class="ck">Leasing</div><a class="cv" href="mailto:leasing@solace74.com">leasing@solace74.com</a></div>
+        <div class="row"><div class="ck">Address</div><div class="cv">74 St Marks Place<br>Brooklyn, New York</div></div>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <form id="inqForm" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="inquiry">
+        <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+        <div class="field"><label for="fname">Name</label><input id="fname" name="name" type="text" placeholder="First and last name" required></div>
+        <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" placeholder="you@email.com" required></div>
+        <div class="field"><label for="fphone">Phone</label><input id="fphone" name="phone" type="tel" placeholder="(000) 000-0000"></div>
+        <div class="field"><label for="flayout">Home type</label>
+          <select id="flayout" name="layout"><option value="">Select a layout</option><option>Studio</option><option>One bedroom</option><option>Two bedroom</option><option>Three bedroom</option><option>Not sure yet</option></select>
+        </div>
+        <div class="field"><label for="fmsg">Message</label><textarea id="fmsg" name="message" placeholder="Anything you'd like us to know"></textarea></div>
+        <button class="btn" type="submit">Request information</button>
+        <p class="form-note">By submitting, you agree to be contacted by the Solace leasing team. We never share your information.</p>
+      </form>
+      <div class="form-done" id="formDone">
+        <div class="serif">Thank you &mdash; we'll be in touch.</div>
+        <p>Your inquiry has reached the Solace leasing team. Expect to hear from us shortly with availability and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img class="foot-logo" src="assets/logo.png" alt="Solace">
+        <p style="margin-top:16px;max-width:280px;font-size:14px;color:#8f8071">A warm modern rental residence at the corner of St Marks Place and Fourth Avenue, Brooklyn.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <div class="fh">Explore</div>
+          <a href="residences.html">Residences</a>
+          <a href="amenities.html">Amenities</a>
+          <a href="rooftop.html">Rooftop</a>
+          <a href="neighborhood.html">Neighborhood</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="foot-col">
+          <div class="fh">Leasing</div>
+          <a href="mailto:leasing@solace74.com">leasing@solace74.com</a>
+          <p>74 St Marks Place</p>
+          <p>Brooklyn, New York</p>
+          <a href="#inquire">Request information</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 Solace at 74 St Marks. All rights reserved.</div>
+      <div class="eho"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10h2v9h5v-5h4v5h5v-9h2z"/></svg><span>Equal Housing Opportunity</span></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body></html>
