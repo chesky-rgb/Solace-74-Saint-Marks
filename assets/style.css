@@ -290,3 +290,32 @@ footer{background:var(--espresso-2);color:#C9BBA9;padding:80px 0 44px}
   .gallery{columns:1}
   .lb .lb-nav{font-size:32px;padding:10px}
 }
+
+
+/* ---- neighborhood map ---- */
+.map-grid{display:grid;grid-template-columns:1.45fr .85fr;gap:36px;align-items:start}
+#hoodmap{height:540px;width:100%;border-radius:3px;overflow:hidden;border:1px solid var(--line);z-index:1;background:#E6DDD0}
+.leaflet-container{font-family:inherit}
+.map-pin{overflow:visible}
+.map-pin .mk{display:block;width:14px;height:14px;border-radius:50%;background:var(--c,#8C744C);box-shadow:0 0 0 3px #fff,0 2px 6px rgba(0,0,0,.3)}
+.map-pin.is-home .mk{width:20px;height:20px;background:#1F1915;box-shadow:0 0 0 4px #C9A86E,0 3px 10px rgba(0,0,0,.5)}
+.leaflet-popup-content-wrapper{border-radius:3px;box-shadow:0 10px 34px -12px rgba(40,30,20,.5)}
+.leaflet-popup-content{font-family:inherit;font-size:13px;color:var(--ink);margin:12px 14px;line-height:1.4}
+.leaflet-popup-content strong{font-family:"Fraunces",serif;font-weight:400;font-size:15.5px;color:var(--ink)}
+.place-list{display:flex;flex-direction:column;gap:22px}
+.pl-group .plh{display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.pl-group .plh .dot{width:9px;height:9px;border-radius:50%;flex:none}
+.pli{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:5px 0}
+.pli .pn{font-size:15px;color:var(--ink)}
+.pli .pm{font-size:12.5px;color:var(--brass);white-space:nowrap}
+.map-note{margin-top:20px;font-size:12px;color:var(--ink-soft);opacity:.8}
+@media(max-width:1000px){.map-grid{grid-template-columns:1fr;gap:28px}#hoodmap{height:400px}}
+@media(max-width:720px){#hoodmap{height:340px}}
+
+
+/* ---- legal / accessibility page ---- */
+.legal h3{font-family:"Fraunces",serif;font-weight:400;font-size:22px;margin:38px 0 10px;color:var(--ink)}
+.legal p{color:var(--ink-soft);font-size:16.5px;margin-bottom:14px;max-width:640px}
+.legal a{color:var(--brass);text-decoration:underline}
+.legal ul{margin:4px 0 16px 20px;color:var(--ink-soft)}
+.legal li{margin-bottom:7px;font-size:16.5px}

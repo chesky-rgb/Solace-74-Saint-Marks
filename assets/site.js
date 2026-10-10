@@ -74,3 +74,39 @@ if(form){
     else if(e.key==='ArrowRight')show(i+1);
   });
 })();
+
+
+/* ---------- neighborhood map (Leaflet) ---------- */
+(function(){
+  var el=document.getElementById('hoodmap');
+  if(!el||!window.L) return;
+  var CAT={Transit:'#5a7a8c',Culture:'#8a5a6a',Parks:'#5f7049',Dining:'#9a6a3c',Everyday:'#7a6a4c'};
+  var P=[
+    {n:"Solace",lat:40.68175,lng:-73.98005,cat:"home",sub:"74 St Marks Place"},
+    {n:"Atlantic Av\u2013Barclays Center",lat:40.6844,lng:-73.9765,cat:"Transit",w:"5 min walk"},
+    {n:"Union St Station \u00b7 R",lat:40.6772,lng:-73.9832,cat:"Transit",w:"7 min walk"},
+    {n:"Barclays Center",lat:40.6826,lng:-73.9754,cat:"Culture",w:"5 min walk"},
+    {n:"Prospect Park",lat:40.6740,lng:-73.9701,cat:"Parks",w:"12 min walk"},
+    {n:"al di l\u00e0 Trattoria",lat:40.6753,lng:-73.9814,cat:"Dining",w:"9 min walk"},
+    {n:"Whole Foods Market",lat:40.6749,lng:-73.9888,cat:"Everyday",w:"13 min walk"},
+    {n:"Trader Joe's",lat:40.6896,lng:-73.9929,cat:"Everyday",w:"short ride"}
+  ];
+  var map=L.map(el,{scrollWheelZoom:false,zoomControl:true});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    {maxZoom:19,subdomains:'abcd',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+  var pts=[], homeM=null;
+  P.forEach(function(p){
+    var home=p.cat==='home', color=home?'#1F1915':(CAT[p.cat]||'#8C744C');
+    var icon=L.divIcon({className:'map-pin'+(home?' is-home':''),
+      html:'<span class="mk" style="--c:'+color+'"></span>',
+      iconSize:home?[20,20]:[14,14], iconAnchor:home?[10,10]:[7,7], popupAnchor:[0,home?-11:-8]});
+    var m=L.marker([p.lat,p.lng],{icon:icon,zIndexOffset:home?1000:0,title:p.n}).addTo(map);
+    m.bindPopup(home?('<strong>'+p.n+'</strong><br>'+p.sub):('<strong>'+p.n+'</strong><br>'+p.cat+' \u00b7 '+p.w),{closeButton:false});
+    if(!home) m.on('mouseover',function(){this.openPopup();});
+    if(home) homeM=m;
+    pts.push([p.lat,p.lng]);
+  });
+  map.fitBounds(pts,{padding:[45,45]});
+  if(map.getZoom()>15) map.setZoom(15);
+  if(homeM) homeM.openPopup();
+})();
