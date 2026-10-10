@@ -51,41 +51,56 @@
   </div>
 </section>
 
-<section class="band mapsec" id="map">
+<section class="band" id="explore">
   <div class="wrap">
-    <div class="reveal" style="margin-bottom:40px;max-width:640px">
-      <span class="label eyebrow">On the Map</span>
-      <h2 style="font-size:clamp(28px,3.6vw,46px)">Everything,<br>within reach.</h2>
-      <p style="color:var(--ink-soft);font-size:18px;margin-top:18px">Where Park Slope, Gowanus and Prospect Heights meet &mdash; parks, transit, groceries and a celebrated food scene, most of it a short walk from the door.</p>
+    <div class="reveal" style="max-width:680px;margin-bottom:40px">
+      <span class="label eyebrow">Explore the Neighborhood</span>
+      <h2 style="font-size:clamp(30px,4vw,54px);margin-top:10px">The best of Brooklyn,<br>just outside your door.</h2>
+      <p style="color:var(--ink-soft);font-size:18px;margin-top:18px">Dining, drinks, coffee, culture and green space &mdash; most of it a short walk from 74 St Marks. Walking times are approximate; tap any place for directions.</p>
     </div>
-    <div class="map-grid reveal d1">
-      <div id="hoodmap" aria-label="Map of Solace at 74 St Marks and nearby places"></div>
-      <div class="place-list">
-        <div class="pl-group">
-          <div class="plh"><span class="dot" style="background:#5a7a8c"></span>Transit</div>
-          <div class="pli"><span class="pn">Atlantic Av&ndash;Barclays Center</span><span class="pm">5 min</span></div>
-          <div class="pli"><span class="pn">Union St Station &middot; R</span><span class="pm">7 min</span></div>
-        </div>
-        <div class="pl-group">
-          <div class="plh"><span class="dot" style="background:#8a5a6a"></span>Culture &amp; Events</div>
-          <div class="pli"><span class="pn">Barclays Center</span><span class="pm">5 min</span></div>
-        </div>
-        <div class="pl-group">
-          <div class="plh"><span class="dot" style="background:#5f7049"></span>Parks</div>
-          <div class="pli"><span class="pn">Prospect Park</span><span class="pm">12 min</span></div>
-        </div>
-        <div class="pl-group">
-          <div class="plh"><span class="dot" style="background:#9a6a3c"></span>Dining</div>
-          <div class="pli"><span class="pn">al di l&agrave; Trattoria</span><span class="pm">9 min</span></div>
-        </div>
-        <div class="pl-group">
-          <div class="plh"><span class="dot" style="background:#7a6a4c"></span>Everyday</div>
-          <div class="pli"><span class="pn">Whole Foods Market</span><span class="pm">13 min</span></div>
-          <div class="pli"><span class="pn">Trader Joe's</span><span class="pm">short ride</span></div>
-        </div>
-      </div>
+    <div id="hoodmap" class="reveal d1" aria-label="Map of Solace and nearby places" style="margin-bottom:56px"></div>
+    <div class="guide">
+  <div class="guide-cat reveal">
+    <div class="gc-head"><span class="dot" style="background:#9a6a3c"></span>Dining</div>
+    <div class="gc-grid">
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Miriam%2079%205th%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Miriam</span><span class="gc-walk">5 min</span></div><div class="gc-desc">Sunlit Israeli-Mediterranean plates and a beloved weekend brunch.</div><div class="gc-addr">79 5th Avenue</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Sofreh%2075%20St%20Marks%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Sofreh</span><span class="gc-walk">9 min</span></div><div class="gc-desc">Acclaimed Persian cooking in warm, jewel-toned rooms — around the corner.</div><div class="gc-addr">75 St Marks Avenue</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Rucola%20190%20Dean%20Street%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Rucola</span><span class="gc-walk">11 min</span></div><div class="gc-desc">Rustic Northern-Italian plates and natural wine in Boerum Hill.</div><div class="gc-addr">190 Dean Street</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=al%20di%20l%C3%A0%20Trattoria%20248%205th%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">al di là Trattoria</span><span class="gc-walk">12 min</span></div><div class="gc-desc">A Park Slope institution for Venetian country cooking.</div><div class="gc-addr">248 5th Avenue</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=French%20Louie%20320%20Atlantic%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">French Louie</span><span class="gc-walk">16 min</span></div><div class="gc-desc">French-American bistro with a coveted garden on Atlantic.</div><div class="gc-addr">320 Atlantic Avenue</div><span class="gc-link">Directions &#8599;</span></a>
     </div>
-    <p class="map-note">Walk times are approximate.</p>
+  </div>
+  <div class="guide-cat reveal">
+    <div class="gc-head"><span class="dot" style="background:#6b4e6e"></span>Drinks</div>
+    <div class="gc-grid">
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Blueprint%20196%205th%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Blueprint</span><span class="gc-walk">9 min</span></div><div class="gc-desc">Inventive craft cocktails and a hidden back patio on Fifth.</div><div class="gc-addr">196 5th Avenue</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Union%20Hall%20702%20Union%20Street%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Union Hall</span><span class="gc-walk">11 min</span></div><div class="gc-desc">Fireside library bar with indoor bocce and comedy downstairs.</div><div class="gc-addr">702 Union Street</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Clover%20Club%20210%20Smith%20Street%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Clover Club</span><span class="gc-walk">18 min</span></div><div class="gc-desc">A world-renowned cocktail parlor on Smith Street.</div><div class="gc-addr">210 Smith Street</div><span class="gc-link">Directions &#8599;</span></a>
+    </div>
+  </div>
+  <div class="guide-cat reveal">
+    <div class="gc-head"><span class="dot" style="background:#7a5236"></span>Coffee</div>
+    <div class="gc-grid">
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Gorilla%20Coffee%20472%20Bergen%20Street%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Gorilla Coffee</span><span class="gc-walk">6 min</span></div><div class="gc-desc">Bold, locally roasted espresso — a neighborhood fixture.</div><div class="gc-addr">472 Bergen Street</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Cafe%20Volkan%2085%20Bergen%20Street%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Cafe Volkan</span><span class="gc-walk">17 min</span></div><div class="gc-desc">A cozy café for pastries, bagels and a proper flat white.</div><div class="gc-addr">85 Bergen Street</div><span class="gc-link">Directions &#8599;</span></a>
+    </div>
+  </div>
+  <div class="guide-cat reveal">
+    <div class="gc-head"><span class="dot" style="background:#8a5a6a"></span>Culture & Entertainment</div>
+    <div class="gc-grid">
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Barclays%20Center%20620%20Atlantic%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Barclays Center</span><span class="gc-walk">6 min</span></div><div class="gc-desc">Concerts, the Nets and marquee events, minutes up Fourth.</div><div class="gc-addr">620 Atlantic Avenue</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Brooklyn%20Academy%20of%20Music%2030%20Lafayette%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Brooklyn Academy of Music</span><span class="gc-walk">10 min</span></div><div class="gc-desc">Brooklyn's landmark home for theater, dance, opera and film.</div><div class="gc-addr">30 Lafayette Avenue</div><span class="gc-link">Directions &#8599;</span></a>
+    </div>
+  </div>
+  <div class="guide-cat reveal">
+    <div class="gc-head"><span class="dot" style="background:#5f7049"></span>Parks & Shopping</div>
+    <div class="gc-grid">
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Fifth%20Avenue%20Corridor%20Park%20Slope%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Fifth Avenue Corridor</span><span class="gc-walk">3 min</span></div><div class="gc-desc">Independent boutiques, cafés and restaurants, right off your block.</div><div class="gc-addr">Park Slope</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Atlantic%20Terminal%20139%20Flatbush%20Avenue%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Atlantic Terminal</span><span class="gc-walk">7 min</span></div><div class="gc-desc">Everyday shopping and essentials beside the transit hub.</div><div class="gc-addr">139 Flatbush Avenue</div><span class="gc-link">Directions &#8599;</span></a>
+      <a class="gcard" href="https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination=Prospect%20Park%20Grand%20Army%20Plaza%20Brooklyn%20NY&travelmode=walking" target="_blank" rel="noopener"><div class="gc-top"><span class="gc-name">Prospect Park</span><span class="gc-walk">15 min</span></div><div class="gc-desc">585 acres for running, cycling and open-air weekends.</div><div class="gc-addr">Grand Army Plaza</div><span class="gc-link">Directions &#8599;</span></a>
+    </div>
+  </div>
+</div>
   </div>
 </section>
 <section class="inquire band" id="inquire">
