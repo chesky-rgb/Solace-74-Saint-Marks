@@ -22,8 +22,8 @@ if('IntersectionObserver' in window){
   reveals.forEach(el=>el.classList.add('in'));
 }
 
-// inquiry form -> Web3Forms (emails the site owner). PASTE YOUR KEY ON THE NEXT LINE.
-const WEB3FORMS_KEY="5b5dbd8f-c465-46d2-8b11-d00d3d6fc009";
+// inquiry form -> Web3Forms via AJAX for an in-page thank-you.
+// The <form> also has action + hidden access_key, so it submits even if JS fails.
 const form=document.getElementById('inqForm'),done=document.getElementById('formDone');
 if(form){
   const nameEl=document.getElementById('fname'), emailEl=document.getElementById('femail');
@@ -33,11 +33,11 @@ if(form){
     if(!nameEl.value.trim()){nameEl.focus();return;}
     if(!emailEl.value.trim()||!emailEl.checkValidity()){emailEl.focus();return;}
     if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
-    const fd=new FormData(form); fd.append('access_key',WEB3FORMS_KEY);
     try{
-      await fetch('https://api.web3forms.com/submit',{method:'POST',
-        headers:{'Accept':'application/json'}, body:fd});
-    }catch(err){/* still show confirmation */}
+      const r=await fetch('https://api.web3forms.com/submit',{method:'POST',
+        headers:{'Accept':'application/json'}, body:new FormData(form)});
+      console.log('web3forms',r.status,await r.clone().json().catch(()=>({})));
+    }catch(err){console.log('web3forms error',err);}
     form.style.display='none';done.classList.add('on');
     done.scrollIntoView({behavior:'smooth',block:'center'});
   });
