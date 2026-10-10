@@ -319,3 +319,8 @@ footer{background:var(--espresso-2);color:#C9BBA9;padding:80px 0 44px}
 .legal a{color:var(--brass);text-decoration:underline}
 .legal ul{margin:4px 0 16px 20px;color:var(--ink-soft)}
 .legal li{margin-bottom:7px;font-size:16.5px}
+
+
+/* home (building) map marker */
+.map-pin.is-home .homemk{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#1F1915;box-shadow:0 0 0 3px #C9A86E,0 3px 10px rgba(0,0,0,.45)}
+.map-pin.is-home .homemk svg{width:18px;height:18px;fill:#F4EFE7}

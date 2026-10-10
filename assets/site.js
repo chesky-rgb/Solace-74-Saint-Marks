@@ -98,10 +98,14 @@ if(form){
     {maxZoom:16}).addTo(map);
   var pts=[], homeM=null;
   P.forEach(function(p){
-    var home=p.cat==='home', color=home?'#1F1915':(CAT[p.cat]||'#8C744C');
-    var icon=L.divIcon({className:'map-pin'+(home?' is-home':''),
-      html:'<span class="mk" style="--c:'+color+'"></span>',
-      iconSize:home?[20,20]:[14,14], iconAnchor:home?[10,10]:[7,7], popupAnchor:[0,home?-11:-8]});
+    var home=p.cat==='home', color=(CAT[p.cat]||'#8C744C');
+    var icon = home
+      ? L.divIcon({className:'map-pin is-home',
+          html:'<span class="homemk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"></path></svg></span>',
+          iconSize:[34,34], iconAnchor:[17,17], popupAnchor:[0,-18]})
+      : L.divIcon({className:'map-pin',
+          html:'<span class="mk" style="--c:'+color+'"></span>',
+          iconSize:[14,14], iconAnchor:[7,7], popupAnchor:[0,-8]});
     var m=L.marker([p.lat,p.lng],{icon:icon,zIndexOffset:home?1000:0,title:p.n}).addTo(map);
     m.bindPopup(home?('<strong>'+p.n+'</strong><br>'+p.sub):('<strong>'+p.n+'</strong><br>'+p.cat+' \u00b7 '+p.w),{closeButton:false});
     if(!home) m.on('mouseover',function(){this.openPopup();});
