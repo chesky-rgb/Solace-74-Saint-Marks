@@ -1,0 +1,12 @@
+# Clean URLs — serve .html pages without the extension, redirect old .html links
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:page.html"
+  to = "/:page"
+  status = 301
+  force = true
