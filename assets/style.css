@@ -324,3 +324,21 @@ footer{background:var(--espresso-2);color:#C9BBA9;padding:80px 0 44px}
 /* home (building) map marker */
 .map-pin.is-home .homemk{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#1F1915;box-shadow:0 0 0 3px #C9A86E,0 3px 10px rgba(0,0,0,.45)}
 .map-pin.is-home .homemk svg{width:18px;height:18px;fill:#F4EFE7}
+
+
+/* ---- neighborhood guide cards ---- */
+.guide{display:flex;flex-direction:column;gap:46px}
+.guide-cat .gc-head{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.guide-cat .gc-head .dot{width:10px;height:10px;border-radius:50%;flex:none}
+.gc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gcard{display:flex;flex-direction:column;padding:24px 22px 20px;border:1px solid var(--line);border-radius:3px;background:rgba(255,255,255,.35);transition:transform .4s ease,box-shadow .4s ease,border-color .4s ease}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(40,30,20,.5);border-color:var(--brass)}
+.gc-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.gc-name{font-family:"Fraunces",serif;font-weight:400;font-size:20px;color:var(--ink);line-height:1.15}
+.gc-walk{font-size:12px;color:var(--brass);white-space:nowrap;letter-spacing:.04em;font-weight:500}
+.gc-desc{color:var(--ink-soft);font-size:14.5px;margin-top:10px;line-height:1.5;flex:1}
+.gc-addr{font-size:12.5px;color:var(--ink-soft);opacity:.75;margin-top:12px}
+.gc-link{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-top:14px;font-weight:600}
+.gcard:hover .gc-link{color:var(--espresso)}
+@media(max-width:1000px){.gc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.gc-grid{grid-template-columns:1fr}}

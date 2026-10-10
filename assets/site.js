@@ -80,16 +80,24 @@ if(form){
 (function(){
   var el=document.getElementById('hoodmap');
   if(!el||!window.L) return;
-  var CAT={Transit:'#5a7a8c',Culture:'#8a5a6a',Parks:'#5f7049',Dining:'#9a6a3c',Everyday:'#7a6a4c'};
+  var CAT={Dining:'#9a6a3c',Drinks:'#6b4e6e',Coffee:'#7a5236','Culture & Entertainment':'#8a5a6a','Parks & Shopping':'#5f7049'};
   var P=[
     {n:"Solace",lat:40.68175,lng:-73.98005,cat:"home",sub:"74 St Marks Place"},
-    {n:"Atlantic Av\u2013Barclays Center",lat:40.6844,lng:-73.9765,cat:"Transit",w:"5 min walk"},
-    {n:"Union St Station \u00b7 R",lat:40.6772,lng:-73.9832,cat:"Transit",w:"7 min walk"},
-    {n:"Barclays Center",lat:40.6826,lng:-73.9754,cat:"Culture",w:"5 min walk"},
-    {n:"Prospect Park",lat:40.6740,lng:-73.9701,cat:"Parks",w:"12 min walk"},
-    {n:"al di l\u00e0 Trattoria",lat:40.6753,lng:-73.9814,cat:"Dining",w:"9 min walk"},
-    {n:"Whole Foods Market",lat:40.6749,lng:-73.9888,cat:"Everyday",w:"13 min walk"},
-    {n:"Trader Joe's",lat:40.6896,lng:-73.9929,cat:"Everyday",w:"short ride"}
+    {n:"Miriam",lat:40.680158,lng:-73.9777381,cat:"Dining",w:"5 min walk",a:"79 5th Avenue"},
+    {n:"Sofreh",lat:40.6799152,lng:-73.9739708,cat:"Dining",w:"9 min walk",a:"75 St Marks Avenue"},
+    {n:"Rucola",lat:40.6856111,lng:-73.9858917,cat:"Dining",w:"11 min walk",a:"190 Dean Street"},
+    {n:"al di là Trattoria",lat:40.6753101,lng:-73.9814311,cat:"Dining",w:"12 min walk",a:"248 5th Avenue"},
+    {n:"French Louie",lat:40.6880126,lng:-73.988216,cat:"Dining",w:"16 min walk",a:"320 Atlantic Avenue"},
+    {n:"Blueprint",lat:40.6768844,lng:-73.980377,cat:"Drinks",w:"9 min walk",a:"196 5th Avenue"},
+    {n:"Union Hall",lat:40.6760744,lng:-73.9800823,cat:"Drinks",w:"11 min walk",a:"702 Union Street"},
+    {n:"Clover Club",lat:40.684589,lng:-73.9921382,cat:"Drinks",w:"18 min walk",a:"210 Smith Street"},
+    {n:"Gorilla Coffee",lat:40.6808028,lng:-73.9757071,cat:"Coffee",w:"6 min walk",a:"472 Bergen Street"},
+    {n:"Cafe Volkan",lat:40.6866988,lng:-73.9900531,cat:"Coffee",w:"17 min walk",a:"85 Bergen Street"},
+    {n:"Barclays Center",lat:40.6826465,lng:-73.9754156,cat:"Culture & Entertainment",w:"6 min walk",a:"620 Atlantic Avenue"},
+    {n:"Brooklyn Academy of Music",lat:40.6864737,lng:-73.9776469,cat:"Culture & Entertainment",w:"10 min walk",a:"30 Lafayette Avenue"},
+    {n:"Fifth Avenue Corridor",lat:40.6788,lng:-73.9792,cat:"Parks & Shopping",w:"3 min walk",a:"Park Slope"},
+    {n:"Atlantic Terminal",lat:40.684568,lng:-73.976977,cat:"Parks & Shopping",w:"7 min walk",a:"139 Flatbush Avenue"},
+    {n:"Prospect Park",lat:40.6726,lng:-73.9702,cat:"Parks & Shopping",w:"15 min walk",a:"Grand Army Plaza"}
   ];
   var map=L.map(el,{scrollWheelZoom:false,zoomControl:true});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
@@ -107,7 +115,8 @@ if(form){
           html:'<span class="mk" style="--c:'+color+'"></span>',
           iconSize:[14,14], iconAnchor:[7,7], popupAnchor:[0,-8]});
     var m=L.marker([p.lat,p.lng],{icon:icon,zIndexOffset:home?1000:0,title:p.n}).addTo(map);
-    m.bindPopup(home?('<strong>'+p.n+'</strong><br>'+p.sub):('<strong>'+p.n+'</strong><br>'+p.cat+' \u00b7 '+p.w),{closeButton:false});
+    var dir='https://www.google.com/maps/dir/?api=1&origin=74+St+Marks+Place+Brooklyn+NY&destination='+encodeURIComponent(p.n+' '+(p.a||'')+' Brooklyn NY')+'&travelmode=walking';
+    m.bindPopup(home?('<strong>'+p.n+'</strong><br>'+p.sub):('<strong>'+p.n+'</strong><br>'+p.cat+' \u00b7 '+p.w+'<br><a href="'+dir+'" target="_blank" rel="noopener" style="color:#8C744C">Directions &#8599;</a>'),{closeButton:false});
     if(!home) m.on('mouseover',function(){this.openPopup();});
     if(home) homeM=m;
     pts.push([p.lat,p.lng]);
