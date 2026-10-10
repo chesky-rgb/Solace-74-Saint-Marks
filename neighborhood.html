@@ -62,7 +62,8 @@
       </div>
     </div>
     <div class="reveal d1">
-      <form id="inqForm" novalidate>
+      <form id="inqForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="5b5dbd8f-c465-46d2-8b11-d00d3d6fc009">
         <input type="hidden" name="subject" value="New inquiry — Solace at 74 St Marks">
         <input type="hidden" name="from_name" value="Solace 74 St Marks website">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
