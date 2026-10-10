@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
 <header class="nav" id="nav">
@@ -50,6 +51,43 @@
   </div>
 </section>
 
+<section class="band mapsec" id="map">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:40px;max-width:640px">
+      <span class="label eyebrow">On the Map</span>
+      <h2 style="font-size:clamp(28px,3.6vw,46px)">Everything,<br>within reach.</h2>
+      <p style="color:var(--ink-soft);font-size:18px;margin-top:18px">Where Park Slope, Gowanus and Prospect Heights meet &mdash; parks, transit, groceries and a celebrated food scene, most of it a short walk from the door.</p>
+    </div>
+    <div class="map-grid reveal d1">
+      <div id="hoodmap" aria-label="Map of Solace at 74 St Marks and nearby places"></div>
+      <div class="place-list">
+        <div class="pl-group">
+          <div class="plh"><span class="dot" style="background:#5a7a8c"></span>Transit</div>
+          <div class="pli"><span class="pn">Atlantic Av&ndash;Barclays Center</span><span class="pm">5 min</span></div>
+          <div class="pli"><span class="pn">Union St Station &middot; R</span><span class="pm">7 min</span></div>
+        </div>
+        <div class="pl-group">
+          <div class="plh"><span class="dot" style="background:#8a5a6a"></span>Culture &amp; Events</div>
+          <div class="pli"><span class="pn">Barclays Center</span><span class="pm">5 min</span></div>
+        </div>
+        <div class="pl-group">
+          <div class="plh"><span class="dot" style="background:#5f7049"></span>Parks</div>
+          <div class="pli"><span class="pn">Prospect Park</span><span class="pm">12 min</span></div>
+        </div>
+        <div class="pl-group">
+          <div class="plh"><span class="dot" style="background:#9a6a3c"></span>Dining</div>
+          <div class="pli"><span class="pn">al di l&agrave; Trattoria</span><span class="pm">9 min</span></div>
+        </div>
+        <div class="pl-group">
+          <div class="plh"><span class="dot" style="background:#7a6a4c"></span>Everyday</div>
+          <div class="pli"><span class="pn">Whole Foods Market</span><span class="pm">13 min</span></div>
+          <div class="pli"><span class="pn">Trader Joe's</span><span class="pm">short ride</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="map-note">Walk times are approximate.</p>
+  </div>
+</section>
 <section class="inquire band" id="inquire">
   <div class="wrap inq-grid">
     <div class="reveal">
@@ -57,7 +95,7 @@
       <h2>Be among the<br>first to arrive.</h2>
       <p class="isub">Leasing begins August 1. Share a few details and our team will reach out with availability, pricing, and a private preview.</p>
       <div class="inq-contact">
-        <div class="row"><div class="ck">Leasing</div><a class="cv" href="mailto:leasing@solace74.com">leasing@solace74.com</a></div>
+        <div class="row"><div class="ck">Leasing</div><a class="cv" href="mailto:hello@85fourth.com">hello@85fourth.com</a></div>
         <div class="row"><div class="ck">Address</div><div class="cv">74 St Marks Place<br>Brooklyn, New York</div></div>
       </div>
     </div>
@@ -102,7 +140,7 @@
         </div>
         <div class="foot-col">
           <div class="fh">Leasing</div>
-          <a href="mailto:leasing@solace74.com">leasing@solace74.com</a>
+          <a href="mailto:hello@85fourth.com">hello@85fourth.com</a>
           <p>74 St Marks Place</p>
           <p>Brooklyn, New York</p>
           <a href="#inquire">Request information</a>
@@ -110,10 +148,11 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <div>&copy; 2026 Solace at 74 St Marks. All rights reserved.</div>
+      <div>&copy; 2026 Solace at 74 St Marks. All rights reserved. &middot; <a href="accessibility.html" style="color:inherit">Accessibility</a></div>
       <div class="eho"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10h2v9h5v-5h4v5h5v-9h2z"/></svg><span>Equal Housing Opportunity</span></div>
     </div>
   </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="assets/site.js"></script>
 </body></html>
