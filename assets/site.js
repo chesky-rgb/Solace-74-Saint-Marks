@@ -92,8 +92,10 @@ if(form){
     {n:"Trader Joe's",lat:40.6896,lng:-73.9929,cat:"Everyday",w:"short ride"}
   ];
   var map=L.map(el,{scrollWheelZoom:false,zoomControl:true});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    {maxZoom:19,subdomains:'abcd',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom:16,attribution:'Tiles &copy; Esri'}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}',
+    {maxZoom:16}).addTo(map);
   var pts=[], homeM=null;
   P.forEach(function(p){
     var home=p.cat==='home', color=home?'#1F1915':(CAT[p.cat]||'#8C744C');
